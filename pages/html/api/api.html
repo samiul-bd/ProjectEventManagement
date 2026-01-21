@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML APIs</title>
+<link rel="stylesheet" href="api.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>HTML APIs</h1>
+  
+  <h2>10.1 Drag and Drop</h2>
+  <div id="dragDiv" draggable="true" ondragstart="dragStart(event)">Drag me!</div>
+  <div id="dropZone" ondrop="dropFunc(event)" ondragover="allowDrop(event)">Drop zone</div>
+  
+  <h2>10.2 Geolocation</h2>
+  <button onclick="findLocation()">Find My Location</button>
+  <p id="locationOutput">Location will appear here</p>
+  
+  <h2>10.3 Web Storage</h2>
+  <h3>10.3.1 Local Storage</h3>
+  <input id="localInput" type="text" placeholder="Enter data" />
+  <button onclick="saveLocal()">Save to Local</button>
+  <button onclick="getLocal()">Get from Local</button>
+  
+  <h3>10.3.2 Session Storage</h3>
+  <input id="sessionInput" type="text" placeholder="Enter data" />
+  <button onclick="saveSession()">Save to Session</button>
+  <button onclick="getSession()">Get from Session</button>
+  
+  <h2>10.4 Web Workers</h2>
+  <p>Counter: <output id="counterOutput">0</output></p>
+  <button onclick="startWorker()">Start Counter</button>
+  <button onclick="stopWorker()">Stop Counter</button>
+  
+  <script>
+    // Drag and Drop
+    function dragStart(e) {
+      e.dataTransfer.setData("text", e.target.id);
+    }
+    
+    function allowDrop(e) {
+      e.preventDefault();
+    }
+    
+    function dropFunc(e) {
+      e.preventDefault();
+      var data = e.dataTransfer.getData("text");
+      e.target.appendChild(document.getElementById(data));
+    }
+    
+    // Geolocation
+    function findLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showLocation);
+      } else {
+        document.getElementById("locationOutput").innerHTML = "Geolocation not supported";
+      }
+    }
+    
+    function showLocation(position) {
+      document.getElementById("locationOutput").innerHTML = 
+        "Lat: " + position.coords.latitude + "<br>Lon: " + position.coords.longitude;
+    }
+    
+    // Web Storage
+    function saveLocal() {
+      var input = document.getElementById("localInput").value;
+      localStorage.setItem("localData", input);
+    }
+    
+    function getLocal() {
+      var data = localStorage.getItem("localData");
+      alert(data);
+    }
+    
+    function saveSession() {
+      var input = document.getElementById("sessionInput").value;
+      sessionStorage.setItem("sessionData", input);
+    }
+    
+    function getSession() {
+      var data = sessionStorage.getItem("sessionData");
+      alert(data);
+    }
+    
+    // Web Workers
+    var worker;
+    
+    function startWorker() {
+      if (typeof Worker !== "undefined") {
+        if (worker === undefined) {
+          worker = new Worker("counter-worker.js");
+        }
+        worker.onmessage = function(event) {
+          document.getElementById("counterOutput").innerHTML = event.data;
+        };
+      } else {
+        document.getElementById("counterOutput").innerHTML = "No worker support";
+      }
+    }
+    
+    function stopWorker() {
+      if (worker) {
+        worker.terminate();
+        worker = undefined;
+      }
+    }
+  </script>
+  
+  <script>
+    // Create worker file dynamically
+    var workerCode = `
+      var count = 0;
+      function updateCount() {
+        count++;
+        postMessage(count);
+        setTimeout(updateCount, 1000);
+      }
+      updateCount();
+    `;
+    var blob = new Blob([workerCode], {type: 'application/javascript'});
+    var workerUrl = URL.createObjectURL(blob);
+    
+    // Override worker creation
+    window.Worker = function() {
+      return new Worker(workerUrl);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 10: Errors and Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="errors.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../../Resources/logo.png" alt="Logo" />
+            <div class="Planly">
+                <h1>Planly</h1>
+                <p>Focused on the planning stage.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../../../Index.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Chapter 10: Errors and Testing</h1>
+    
+    <div class="input-section">
+        <label for="error-input">Enter value for error testing:</label>
+        <input type="text" id="error-input" placeholder="e.g., 5">
+        <button onclick="updateErrorValue()">Update Value</button>
+    </div>
+    
+    <div id="current-error-value">
+        <p>Current Value: <span id="error-value-display">5</span></p>
+    </div>
+    
+    <h2>10.1 Catching and Neutralizing an Error</h2>
+    <div class="section">
+        <button onclick="catchError()">Test Error Catching</button>
+        <p>Result: <span id="catch-error-result">Not started</span></p>
+    </div>
+    
+    <h2>10.2 Catching Different Types of Errors</h2>
+    <div class="section">
+        <button onclick="catchDifferentErrors()">Test Error Types</button>
+        <p>Result: <span id="different-errors-result">Not started</span></p>
+    </div>
+    
+    <h2>10.3 Catching Asynchronous Errors</h2>
+    <div class="section">
+        <button onclick="catchAsyncErrors()">Test Async Errors</button>
+        <p>Result: <span id="async-errors-result">Not started</span></p>
+    </div>
+    
+    <h2>10.4 Detecting Unhandled Errors</h2>
+    <div class="section">
+        <button onclick="detectUnhandledErrors()">Test Unhandled Errors</button>
+        <p>Result: <span id="unhandled-errors-result">Not started</span></p>
+    </div>
+    
+    <h2>10.5 Throwing a Standard Error</h2>
+    <div class="section">
+        <button onclick="throwStandardError()">Test Standard Error</button>
+        <p>Result: <span id="standard-error-result">Not started</span></p>
+    </div>
+    
+    <h2>10.6 Throwing a Custom Error</h2>
+    <div class="section">
+        <button onclick="throwCustomError()">Test Custom Error</button>
+        <p>Result: <span id="custom-error-result">Not started</span></p>
+    </div>
+    
+    <h2>10.7 Writing Unit Tests for Your Code</h2>
+    <div class="section">
+        <button onclick="runUnitTests()">Run Tests</button>
+        <p>Result: <span id="unit-tests-result">Not started</span></p>
+    </div>
+    
+    <h2>10.8 Tracking Test Code Coverage</h2>
+    <div class="section">
+        <button onclick="trackCoverage()">Check Coverage</button>
+        <p>Result: <span id="coverage-result">Not started</span></p>
+    </div>
+    
+    <script src="errors.js"></script>
+</body>
+</html>

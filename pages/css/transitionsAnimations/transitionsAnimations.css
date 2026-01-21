@@ -1,0 +1,126 @@
+.transition-basic {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s, height 2s;
+}
+
+.transition-basic:hover {
+  width: 200px;
+  height: 200px;
+}
+
+.transition-delay {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: width 2s;
+  transition-delay: 1s;
+}
+
+.transition-delay:hover {
+  width: 200px;
+}
+
+.transition-timing {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.transition-timing:hover {
+  width: 200px;
+}
+
+@keyframes basic-animation {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+.animation-basic {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  animation: basic-animation 4s;
+}
+
+@keyframes multi-animation {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+.animation-multi {
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+  animation: multi-animation 4s;
+}
+
+.animation-delay {
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+  animation: multi-animation 4s;
+  animation-delay: 2s;
+}
+
+.animation-iteration {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: multi-animation 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes direction-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+.animation-direction {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  animation: direction-animation 4s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes timing-animation {
+  from {
+    left: 0;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+.animation-timing {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  animation: timing-animation 4s;
+  animation-timing-function: ease-out;
+}

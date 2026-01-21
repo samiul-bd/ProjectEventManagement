@@ -1,0 +1,46 @@
+.section {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.section p {
+    margin: 8px 0;
+}
+
+.section button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.section button:hover {
+    background-color: #004c99;
+}
+
+#d3-chart {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
+audio, video {
+    display: block;
+    margin: 10px 0;
+}
+
+#video-controls {
+    margin: 10px 0;
+}
+
+#video-time {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #0066cc;
+}

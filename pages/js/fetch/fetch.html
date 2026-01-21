@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 13: Fetching Remote Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="fetch.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../../Resources/logo.png" alt="Logo" />
+            <div class="Planly">
+                <h1>Planly</h1>
+                <p>Focused on the planning stage.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../../../Index.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Chapter 13: Fetching Remote Data</h1>
+    
+    <div class="input-section">
+        <label for="url-input">Enter URL for fetch operations:</label>
+        <input type="text" id="url-input" placeholder="e.g., https://api.example.com/data">
+        <button onclick="updateUrl()">Update URL</button>
+    </div>
+    
+    <div id="current-url">
+        <p>Current URL: <span id="url-display">https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY</span></p>
+    </div>
+    
+    <h2>13.1 Requesting Remote Data with Fetch</h2>
+    <div class="section">
+        <button onclick="fetchData()">Fetch Data (Promise)</button>
+        <button onclick="fetchDataAsync()">Fetch Data (Async/Await)</button>
+        <p>Result: <span id="fetch-result">Not started</span></p>
+    </div>
+    
+    <h2>13.2 Using XMLHttpRequest</h2>
+    <div class="section">
+        <button onclick="xhrRequest()">XHR Request</button>
+        <p>Result: <span id="xhr-result">Not started</span></p>
+    </div>
+    
+    <h2>13.3 Submitting a Form</h2>
+    <div class="section">
+        <form id="test-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="Test User">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="test@example.com">
+            <button type="submit">Submit Form</button>
+        </form>
+        <p>Result: <span id="form-result">Not submitted</span></p>
+    </div>
+    
+    <h2>13.4 Populating a Selection List from the Server</h2>
+    <div class="section">
+        <label for="category-select">Select Category:</label>
+        <select id="category-select">
+            <option value="">--Choose a category--</option>
+            <option value="animals">Animals</option>
+            <option value="colors">Colors</option>
+            <option value="fruits">Fruits</option>
+        </select>
+        <select id="subcategory-select">
+            <option value="">--Select category first--</option>
+        </select>
+    </div>
+    
+    <h2>13.5 Parsing Returned JSON</h2>
+    <div class="section">
+        <button onclick="parseJson()">Parse JSON</button>
+        <p>Result: <span id="json-result">Not started</span></p>
+    </div>
+    
+    <h2>13.6 Fetching and Parsing XML</h2>
+    <div class="section">
+        <button onclick="fetchXml()">Fetch XML</button>
+        <ul id="xml-results"></ul>
+    </div>
+    
+    <h2>13.7 Sending Binary Data and Loading into an Image</h2>
+    <div class="section">
+        <button onclick="fetchImage()">Fetch Image</button>
+        <img id="binary-image" style="max-width: 200px; display: none;" />
+    </div>
+    
+    <h2>13.8 Sharing HTTP Cookies Across Domains</h2>
+    <div class="section">
+        <button onclick="fetchWithCredentials()">Fetch with Credentials</button>
+        <p>Result: <span id="credential-result">Not started</span></p>
+    </div>
+    
+    <h2>13.9 Using WebSockets</h2>
+    <div class="section">
+        <button onclick="connectWebSocket()">Connect WebSocket</button>
+        <p>Result: <span id="websocket-result">Not started</span></p>
+    </div>
+    
+    <h2>13.10 Long Polling</h2>
+    <div class="section">
+        <button onclick="startLongPoll()">Start Long Polling</button>
+        <p>Result: <span id="polling-result">Not started</span></p>
+    </div>
+    
+    <script src="fetch.js"></script>
+</body>
+</html>

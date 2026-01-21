@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 15: Working with Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../../Resources/logo.png" alt="Logo" />
+            <div class="Planly">
+                <h1>Planly</h1>
+                <p>Focused on the planning stage.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../../../Index.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Chapter 15: Working with Media</h1>
+    
+    <h2>15.1 Adding JavaScript to SVG</h2>
+    <div class="section">
+        <svg width="300" height="200" id="svg-container">
+            <rect id="square" width="100" height="100" fill="#ff0000" x="10" y="10" />
+            <script>
+                document.getElementById('square').addEventListener('click', function() {
+                    const color = this.getAttribute('fill');
+                    this.setAttribute('fill', color === '#ff0000' ? '#0000ff' : '#ff0000');
+                });
+            </script>
+        </svg>
+    </div>
+    
+    <h2>15.2 Accessing SVG from a Web Page Script</h2>
+    <div class="section">
+        <svg width="300" height="200" id="svg-access">
+            <rect id="access-rect" width="100" height="100" fill="#00ff00" x="10" y="10" />
+        </svg>
+        <button onclick="modifySvg()">Modify SVG</button>
+    </div>
+    
+    <h2>15.3 Creating an SVG Bar Chart with D3</h2>
+    <div class="section">
+        <div id="d3-chart"></div>
+        <button onclick="createBarChart()">Create Bar Chart</button>
+    </div>
+    
+    <h2>15.4 Integrating SVG and the Canvas Element in HTML</h2>
+    <div class="section">
+        <canvas id="myCanvas" width="300" height="150"></canvas>
+        <svg width="300" height="150">
+            <foreignObject width="150" height="150">
+                <canvas id="embeddedCanvas" width="150" height="150"></canvas>
+            </foreignObject>
+            <circle cx="200" cy="75" r="30" fill="#ff00ff" />
+        </svg>
+        <button onclick="drawOnCanvas()">Draw on Canvas</button>
+    </div>
+    
+    <h2>15.5 Running a Routine When an Audio File Begins Playing</h2>
+    <div class="section">
+        <audio id="audio-player" controls>
+            <source src="../../../Resources/sample.mp3" type="audio/mpeg">
+            <source src="sample.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="setupAudioEvents()">Setup Audio Events</button>
+        <div id="audio-info"></div>
+    </div>
+    
+    <h2>15.6 Controlling Video from JavaScript with the video Element</h2>
+    <div class="section">
+        <video id="video-player" width="320" height="240" controls>
+            <source src="../../../Resources/sample.mp4" type="video/mp4">
+            <source src="sample.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div id="video-controls">
+            <button id="play-btn">Play</button>
+            <button id="pause-btn">Pause</button>
+            <button id="stop-btn">Stop</button>
+        </div>
+        <div id="video-time">Time: 0s</div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="media.js"></script>
+</body>
+</html>

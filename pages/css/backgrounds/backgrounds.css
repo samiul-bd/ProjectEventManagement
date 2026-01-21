@@ -1,0 +1,101 @@
+#bg-color {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+#bg-image {
+  background-image: url('../../../Resources/bg.jpg');
+  padding: 10px;
+  height: 100px;
+}
+
+#bg-repeat {
+  background-image: url('../../../Resources/bg.jpg');
+  background-repeat: repeat-x;
+  padding: 10px;
+  height: 100px;
+}
+
+#bg-position {
+  background-image: url('../../../Resources/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 10px;
+  height: 100px;
+}
+
+#bg-size {
+  background-image: url('../../../Resources/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  padding: 10px;
+  height: 100px;
+}
+
+#bg-clip {
+  background-color: yellow;
+  padding: 20px;
+  border: 10px dotted black;
+  background-clip: padding-box;
+}
+
+#bg-origin {
+  background-image: url('../../../Resources/bg.jpg');
+  background-repeat: no-repeat;
+  padding: 30px;
+  border: 10px solid red;
+  height: 100px;
+  background-origin: border-box;
+}
+
+#bg-attachment {
+  background-image: url('../../../Resources/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
+  height: 100px;
+}
+
+#linear-gradient {
+  background: linear-gradient(to right, red, yellow);
+  padding: 10px;
+  height: 60px;
+}
+
+#repeating-linear {
+  background: repeating-linear-gradient(red, yellow 20%, blue 40%);
+  padding: 10px;
+  height: 60px;
+}
+
+#radial-gradient {
+  background: radial-gradient(circle, red, yellow, blue);
+  padding: 10px;
+  height: 60px;
+}
+
+#repeating-radial {
+  background: repeating-radial-gradient(red, yellow 10%, blue 20%);
+  padding: 10px;
+  height: 60px;
+}
+
+.sprite {
+  width: 50px;
+  height: 50px;
+  background-image: url('../../../Resources/sprites.jpg');
+  display: inline-block;
+  margin: 5px;
+}
+
+.number-1 {
+  background-position: 0 0;
+}
+
+.number-2 {
+  background-position: -50px 0;
+}
+
+.number-3 {
+  background-position: -100px 0;
+}

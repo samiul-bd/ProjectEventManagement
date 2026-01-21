@@ -1,0 +1,17 @@
+#color-names {
+  background-color: red;
+}
+
+#hex-colors {
+  color: #ff0000;
+  background-color: #ff0;
+}
+
+#rgb-colors {
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 0);
+}
+
+#grey-colors {
+  background-color: #808080;
+}

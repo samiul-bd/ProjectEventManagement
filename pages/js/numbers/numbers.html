@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Chapter 3 - Numbers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="numbers.css">
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="../../../Resources/logo.png" alt="Logo" />
+<div class="Planly">
+<h1>Planly</h1>
+<p>Focused on the planning stage.</p>
+</div>
+</div>
+<nav>
+<a href="../../../Index.html">Home</a>
+</nav>
+</header>
+
+<section class="chapter-content">
+<h2>Chapter 3: Numbers</h2>
+
+<div class="lesson">
+<h3>Generate Random Number</h3>
+<label>Min: <input type="number" id="randMin" value="1"></label>
+<label>Max: <input type="number" id="randMax" value="6"></label>
+<button onclick="generateRandom()">Generate</button>
+<pre id="randomOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>Cryptographically Secure Random Number</h3>
+<label>Min: <input type="number" id="cryptoMin" value="1"></label>
+<label>Max: <input type="number" id="cryptoMax" value="6"></label>
+<button onclick="generateCryptoRandom()">Generate</button>
+<pre id="cryptoOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>Round a Number</h3>
+<label>Number: <input type="number" id="roundNum" value="19.48938" step="0.0001"></label>
+<label>Decimal Places: <input type="number" id="roundDecimal" value="2"></label>
+<button onclick="roundNumber()">Round</button>
+<pre id="roundOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>String to Number</h3>
+<label>Input: <input type="text" id="stringInput" value="42"></label>
+<button onclick="stringToNumber()">Convert</button>
+<pre id="stringOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>Decimal to Hexadecimal</h3>
+<label>Decimal: <input type="number" id="hexInput" value="255"></label>
+<button onclick="decimalToHex()">Convert</button>
+<pre id="hexOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>Degrees & Radians</h3>
+<label>Degrees: <input type="number" id="degreeInput" value="90"></label>
+<button onclick="convertDegrees()">Convert</button>
+<pre id="degreeOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>Arc Length</h3>
+<label>Radius: <input type="number" id="arcRadius" value="2"></label>
+<label>Angle (Degrees): <input type="number" id="arcAngle" value="120"></label>
+<button onclick="calculateArc()">Calculate</button>
+<pre id="arcOutput"></pre>
+</div>
+
+<div class="lesson">
+<h3>BigInt Operations</h3>
+<label>BigInt: <input type="text" id="bigIntInput" value="9007199254740991"></label>
+<label>Add: <input type="number" id="bigIntAdd" value="10"></label>
+<button onclick="bigIntOperation()">Compute</button>
+<pre id="bigIntOutput"></pre>
+</div>
+
+</section>
+
+<script src="numbers.js"></script>
+</body>
+</html>

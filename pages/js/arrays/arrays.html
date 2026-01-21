@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 5: Arrays</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="arrays.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>Chapter 5: Arrays</h1>
+  
+  <div class="input-section">
+    <label for="array-input">Enter array elements (comma separated):</label>
+    <input type="text" id="array-input" placeholder="e.g., 1,2,3,4,5">
+    <button onclick="updateArray()">Update Array</button>
+  </div>
+  
+  <div id="current-array">
+    <p>Current Array: <span id="array-display">[]</span></p>
+  </div>
+  
+  <h2>Array Creation</h2>
+  <div class="array-section">
+    <button onclick="createEmptyArray()">Create Empty Array</button>
+    <p>Result: <span id="empty-array"></span></p>
+    
+    <button onclick="createConstructorArray()">Create Array with Constructor</button>
+    <p>Enter size: <input type="number" id="constructor-size" value="5"></p>
+    <p>Result: <span id="constructor-array"></span></p>
+  </div>
+  
+  <h2>Accessing Array Elements</h2>
+  <div class="array-section">
+    <button onclick="getFirstElement()">Get First Element</button>
+    <p>Result: <span id="first-element"></span></p>
+    
+    <button onclick="getLastElement()">Get Last Element</button>
+    <p>Result: <span id="last-element"></span></p>
+    
+    <p>Enter index: <input type="number" id="access-index" value="0"></p>
+    <button onclick="getElementAtIndex()">Get Element at Index</button>
+    <p>Result: <span id="index-element"></span></p>
+  </div>
+  
+  <h2>Array Methods</h2>
+  <div class="array-section">
+    <p>Enter value to add: <input type="text" id="push-value" value="newItem"></p>
+    <button onclick="pushToArray()">Push</button>
+    <p>Result: <span id="push-result"></span></p>
+    
+    <button onclick="popFromArray()">Pop</button>
+    <p>Result: <span id="pop-result"></span></p>
+    
+    <button onclick="shiftFromArray()">Shift</button>
+    <p>Result: <span id="shift-result"></span></p>
+    
+    <p>Enter value to add: <input type="text" id="unshift-value" value="firstItem"></p>
+    <button onclick="unshiftToArray()">Unshift</button>
+    <p>Result: <span id="unshift-result"></span></p>
+    
+    <p>Start index: <input type="number" id="slice-start" value="1"> End index: <input type="number" id="slice-end" value="3></p>
+    <button onclick="sliceArray()">Slice</button>
+    <p>Result: <span id="slice-result"></span></p>
+    
+    <p>Start: <input type="number" id="splice-start" value="1"> Delete count: <input type="number" id="splice-delete" value="1"> New items: <input type="text" id="splice-items" value="x,y"></p>
+    <button onclick="spliceArray()">Splice</button>
+    <p>Result: <span id="splice-result"></span></p>
+    
+    <p>Enter array to concatenate: <input type="text" id="concat-input" value="6,7,8"></p>
+    <button onclick="concatArrays()">Concat</button>
+    <p>Result: <span id="concat-result"></span></p>
+    
+    <p>Enter separator: <input type="text" id="join-separator" value=", "></p>
+    <button onclick="joinArray()">Join</button>
+    <p>Result: <span id="join-result"></span></p>
+  </div>
+  
+  <h2>Array Search Methods</h2>
+  <div class="array-section">
+    <p>Enter value to find: <input type="text" id="find-value" value="3"></p>
+    <button onclick="findValue()">Find</button>
+    <p>Result: <span id="find-result"></span></p>
+    
+    <p>Enter value to find: <input type="text" id="find-index-value" value="3"></p>
+    <button onclick="findIndex()">Find Index</button>
+    <p>Result: <span id="find-index-result"></span></p>
+    
+    <p>Enter value to check: <input type="text" id="includes-value" value="3"></p>
+    <button onclick="includesValue()">Includes</button>
+    <p>Result: <span id="includes-result"></span></p>
+    
+    <p>Enter value to find: <input type="text" id="indexof-value" value="3"></p>
+    <button onclick="indexOfValue()">Index Of</button>
+    <p>Result: <span id="indexof-result"></span></p>
+  </div>
+  
+  <h2>Array Filter Methods</h2>
+  <div class="array-section">
+    <p>Enter condition (e.g., 'x > 3'): <input type="text" id="filter-condition" value="x > 3"></p>
+    <button onclick="filterArray()">Filter</button>
+    <p>Result: <span id="filter-result"></span></p>
+    
+    <p>Enter condition (e.g., 'x > 0'): <input type="text" id="every-condition" value="x > 0"></p>
+    <button onclick="everyCondition()">Every</button>
+    <p>Result: <span id="every-result"></span></p>
+    
+    <p>Enter condition (e.g., 'x > 3'): <input type="text" id="some-condition" value="x > 3"></p>
+    <button onclick="someCondition()">Some</button>
+    <p>Result: <span id="some-result"></span></p>
+  </div>
+  
+  <h2>Array Sorting</h2>
+  <div class="array-section">
+    <button onclick="sortAlphabetically()">Sort Alphabetically</button>
+    <p>Result: <span id="sort-alpha-result"></span></p>
+    
+    <button onclick="sortNumerically()">Sort Numerically</button>
+    <p>Result: <span id="sort-num-result"></span></p>
+    
+    <button onclick="reverseArray()">Reverse</button>
+    <p>Result: <span id="reverse-result"></span></p>
+  </div>
+  
+  <script src="arrays.js"></script>
+</body>
+</html>

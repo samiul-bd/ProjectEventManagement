@@ -1,0 +1,165 @@
+.relative-container {
+  width: 300px;
+  height: 200px;
+  border: 1px dashed black;
+  position: relative;
+}
+
+.normal-position {
+  border: 1px dashed blue;
+  padding: 10px;
+}
+
+.relative-position {
+  position: relative;
+  left: 30px;
+  top: 30px;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.absolute-container {
+  position: relative;
+  border: 1px solid black;
+  width: 300px;
+  height: 200px;
+}
+
+.absolute-child {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: 1px solid red;
+  background-color: white;
+  padding: 10px;
+}
+
+.fixed-element {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 100px;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: white;
+}
+
+.sticky-container {
+  height: 200px;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+.sticky-element {
+  position: sticky;
+  top: 0;
+  border: 1px solid red;
+  background-color: white;
+  padding: 10px;
+}
+
+.float-container {
+  border: 1px solid black;
+  width: 300px;
+  height: 100px;
+}
+
+.float-left {
+  float: left;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.float-right {
+  float: right;
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.clear-container {
+  border: 1px solid black;
+  width: 300px;
+  height: 100px;
+}
+
+.clear-element {
+  clear: left;
+  border: 1px solid green;
+  padding: 10px;
+}
+
+.zindex-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.zindex-element {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.zindex-1 {
+  z-index: 1;
+  left: 10px;
+  top: 10px;
+  background-color: lightblue;
+}
+
+.zindex-2 {
+  z-index: 2;
+  left: 40px;
+  top: 40px;
+  background-color: lightgreen;
+}
+
+.zindex-3 {
+  z-index: 3;
+  left: 70px;
+  top: 70px;
+  background-color: lightcoral;
+}
+
+.flex-container {
+  display: flex;
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+.flex-item {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+.grid-item {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.alignment-container {
+  border: 1px solid black;
+  width: 300px;
+  height: 100px;
+}
+
+.aligned-element {
+  border: 1px solid red;
+  width: 150px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 8: Classes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="classes.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>Chapter 8: Classes</h1>
+  
+  <div class="input-section">
+    <label for="class-input">Enter class parameters (comma separated):</label>
+    <input type="text" id="class-input" placeholder="e.g., samiul,alam,29">
+    <button onclick="updateParams()">Update Parameters</button>
+  </div>
+  
+  <div id="current-params">
+    <p>Current Parameters: <span id="params-display">[]</span></p>
+  </div>
+  
+  <h2>8.1 Creating a Reusable Class</h2>
+  <div class="section">
+    <button onclick="createClass()">Create Class</button>
+    <p>Result: <span id="class-result"></span></p>
+  </div>
+  
+  <h2>8.2 Adding Properties to a Class</h2>
+  <div class="section">
+    <button onclick="addProperties()">Add Properties</button>
+    <p>Result: <span id="properties-result"></span></p>
+  </div>
+  
+  <h2>8.3 String Representation</h2>
+  <div class="section">
+    <button onclick="toStringMethod()">To String Method</button>
+    <p>Result: <span id="tostring-result"></span></p>
+  </div>
+  
+  <h2>8.4 Constructor Pattern</h2>
+  <div class="section">
+    <button onclick="constructorPattern()">Constructor Pattern</button>
+    <p>Result: <span id="constructor-result"></span></p>
+  </div>
+  
+  <h2>8.5 Method Chaining</h2>
+  <div class="section">
+    <button onclick="methodChaining()">Method Chaining</button>
+    <p>Result: <span id="chaining-result"></span></p>
+  </div>
+  
+  <h2>8.6 Static Methods</h2>
+  <div class="section">
+    <button onclick="staticMethods()">Static Methods</button>
+    <p>Result: <span id="static-result"></span></p>
+  </div>
+  
+  <h2>8.7 Static Creation Methods</h2>
+  <div class="section">
+    <button onclick="staticCreation()">Static Creation</button>
+    <p>Result: <span id="creation-result"></span></p>
+  </div>
+  
+  <h2>8.8 Inheritance</h2>
+  <div class="section">
+    <button onclick="inheritance()">Inheritance</button>
+    <p>Result: <span id="inheritance-result"></span></p>
+  </div>
+  
+  <h2>8.9 Modules</h2>
+  <div class="section">
+    <button onclick="modules()">Modules</button>
+    <p>Result: <span id="modules-result"></span></p>
+  </div>
+  
+  <script src="classes.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 14: Data Persistence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="dataPersistence.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../../Resources/logo.png" alt="Logo" />
+            <div class="Planly">
+                <h1>Planly</h1>
+                <p>Focused on the planning stage.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../../../Index.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Chapter 14: Data Persistence</h1>
+    
+    <h2>14.1 Persisting Information with Cookies</h2>
+    <div class="section">
+        <label for="cookie-key">Cookie Key:</label>
+        <input type="text" id="cookie-key" placeholder="e.g., username">
+        <label for="cookie-value">Cookie Value:</label>
+        <input type="text" id="cookie-value" placeholder="e.g., john_doe">
+        <button onclick="setCookie()">Set Cookie</button>
+        <button onclick="getCookie()">Get Cookie</button>
+        <button onclick="eraseCookie()">Erase Cookie</button>
+        <p>Result: <span id="cookie-result">Not started</span></p>
+    </div>
+    
+    <h2>14.2 Using sessionStorage for Client-Side Storage</h2>
+    <div class="section">
+        <label for="session-key">Session Key:</label>
+        <input type="text" id="session-key" placeholder="e.g., temp-data">
+        <label for="session-value">Session Value:</label>
+        <input type="text" id="session-value" placeholder="e.g., temporary value">
+        <button onclick="setSession()">Set Session</button>
+        <button onclick="getSession()">Get Session</button>
+        <button onclick="removeSession()">Remove Session</button>
+        <button onclick="clearSession()">Clear All</button>
+        <p>Result: <span id="session-result">Not started</span></p>
+    </div>
+    
+    <h2>14.3 Creating a localStorage Client-Side Data Storage Item</h2>
+    <div class="section">
+        <label for="local-key">Local Key:</label>
+        <input type="text" id="local-key" placeholder="e.g., user-pref">
+        <label for="local-value">Local Value:</label>
+        <input type="text" id="local-value" placeholder="e.g., dark-mode">
+        <button onclick="setLocal()">Set Local</button>
+        <button onclick="getLocal()">Get Local</button>
+        <button onclick="removeLocal()">Remove Item</button>
+        <button onclick="clearLocal()">Clear All</button>
+        <p>Result: <span id="local-result">Not started</span></p>
+    </div>
+    
+    <h2>14.4 Persisting Larger Chunks of Data on the Client Using IndexedDB</h2>
+    <div class="section">
+        <label for="db-key">DB Key:</label>
+        <input type="text" id="db-key" placeholder="e.g., record1">
+        <label for="db-value">DB Value:</label>
+        <input type="text" id="db-value" placeholder="e.g., complex data">
+        <button onclick="initDB()">Initialize DB</button>
+        <button onclick="addDB()">Add to DB</button>
+        <button onclick="getDB()">Get from DB</button>
+        <button onclick="getAllDB()">Get All</button>
+        <p>Result: <span id="db-result">Not started</span></p>
+    </div>
+    
+    <h2>14.5 Simplifying IndexedDB with a Library</h2>
+    <div class="section">
+        <label for="lib-key">Library Key:</label>
+        <input type="text" id="lib-key" placeholder="e.g., entry1">
+        <label for="lib-value">Library Value:</label>
+        <input type="text" id="lib-value" placeholder="e.g., simplified data">
+        <button onclick="initLibDB()">Initialize Lib DB</button>
+        <button onclick="addLib()">Add with Library</button>
+        <button onclick="getLib()">Get with Library</button>
+        <p>Result: <span id="lib-result">Not started</span></p>
+    </div>
+    
+    <script src="dataPersistence.js"></script>
+</body>
+</html>

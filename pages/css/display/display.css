@@ -1,0 +1,152 @@
+.display-example {
+  border: 1px solid black;
+  width: 300px;
+  height: 100px;
+}
+
+.inline-block {
+  display: inline-block;
+  border: 1px solid red;
+  height: 40px;
+  padding: 5px;
+}
+
+.block {
+  border: 1px solid blue;
+  padding: 5px;
+}
+
+.hidden-display {
+  display: none;
+}
+
+.hidden-visibility {
+  visibility: hidden;
+}
+
+.object-fit-contain {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  object-fit: contain;
+}
+
+.object-fit-cover {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  object-fit: cover;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overflow-visible {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: visible;
+}
+
+.overflow-hidden {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.overflow-auto {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
+
+.overflow-content {
+  margin: 10px;
+  border: 1px solid red;
+  background-color: white;
+  height: 150px;
+}
+
+.opacity-full {
+  background-color: blue;
+  padding: 10px;
+}
+
+.opacity-half {
+  background-color: blue;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 5px red;
+}
+
+.box-shadow {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px grey;
+  padding: 10px;
+}
+
+.multi-column {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px solid black;
+}
+
+.table-example {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-example th,
+.table-example td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.original {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.translated {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  transform: translate(30px, 20px);
+}
+
+.scaled {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  transform: scale(1.5, 1.2);
+}
+
+.rotated {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  transform: rotate(15deg);
+}
+
+.skewed {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  transform: skew(10deg, 5deg);
+}

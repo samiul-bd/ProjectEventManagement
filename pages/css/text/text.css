@@ -1,0 +1,77 @@
+#color-text {
+  color: blue;
+}
+
+#decoration-text {
+  text-decoration: underline red wavy 2px;
+}
+
+#transform-text {
+  text-transform: uppercase;
+}
+
+#whitespace-text {
+  white-space: pre-wrap;
+  width: 200px;
+  border: 1px solid gray;
+}
+
+#overflow-text {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#wrap-text {
+  width: 200px;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+
+#letter-spacing {
+  letter-spacing: 3px;
+}
+
+#word-spacing {
+  word-spacing: 10px;
+}
+
+#line-height {
+  line-height: 2.0;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+
+#text-align {
+  text-align: center;
+  width: 200px;
+  border: 1px solid gray;
+}
+
+#text-indent {
+  text-indent: 30px;
+  width: 200px;
+  border: 1px solid gray;
+}
+
+#font-family {
+  font-family: Arial, sans-serif;
+}
+
+#font-size {
+  font-size: 1.5rem;
+}
+
+#font-weight {
+  font-weight: bold;
+}
+
+#font-style {
+  font-style: italic;
+}
+
+#font-variant {
+  font-variant: small-caps;
+}

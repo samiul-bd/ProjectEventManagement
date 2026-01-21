@@ -1,0 +1,37 @@
+#demodiv {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#class-demo.initial-class {
+    background-color: lightgray;
+}
+
+#class-demo.changed-class {
+    background-color: lightgreen;
+}
+
+#style-demo {
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+#hide-demo.hidden {
+    display: none;
+}
+
+#hover-img:hover + #popup {
+    display: block;
+}
+
+[aria-invalid="true"] {
+    background-color: #f5b2b2;
+}
+
+.alert {
+    background-color: #ffcccc;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px dashed #000;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAPTER 2 HTML Elements</title>
+  <link rel="stylesheet" href="elements.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+  <section id="Heading">
+    <h1>1. Headings</h1>    
+    <h2>This is an example of Heading 2</h2>
+    <h3>This is an example of Heading 3</h3>
+    <h4>This is an example of Heading 4</h4>
+    <h5>This is an example of Heading 5</h5>
+    <h6>This is an example of Heading 6</h6><br/>
+  </section>
+  <section id="Paragraph">
+    <h1>2. Paragraph</h1>
+      <p>This is a short paragraph example. It contains a few sentences to <br/>
+         demonstrate how text appears within the paragraph tag in HTML documents.
+      </p>
+
+  </section>
+  <section id="Hyperlinks">
+  <h1>3. Hyperlinks</h1><br/> 
+  <h2>3.1 External Anchors</h2> 
+  <p>The external anchors will navigate users to another webpage.
+This page can belong to the same website or another website. Here is an example:</p>
+    <a href="Images.html">Go to External Anchors Page</a>
+    
+  </section>
+  <section id="InternalAnchors">
+      <h1>3.2 Internal Anchors</h1>
+      <p>Internal anchors help users navigate within a webpage based
+     on the IDs of its HTML elements. Without ID, the internal anchors
+     will navigate users to the top of the current page.</p>
+  
+       
+    
+    <a href="#">Click here to go Back to Top</a><br/>
+    <img id="imgUp" src="../../../Resources/Up.png" alt="Up"/>
+   </section>
+   <section id="Images">
+    <h1>4 Images</h1>
+    <p>To display images, we use this elements. like this:</p>
+    <img id="whiteBGImage" src="../../../Resources/logoWhiteBG.png" alt="This is a logo."  />
+   </section>
+   <section id="ImageMaps">
+  <h1>4.1 Image Maps</h1>
+    <p>The &lt;map&gt; element defines an image map having clickable areas. The areas are 
+      represented with one or more &lt;area&gt; elements as children of the &lt;map&gt; element.</p>
+    <p>Click on arrows to go to top or bottom of page.</p>
+
+  <img src="../../../Resources/imgMap.png" usemap="#nav-bar" width="160" height="80" />
+  <map name="nav-bar">
+    <area shape="rect" coords="20,20,80,60" href="#" alt="Go to Top" />
+    <area shape="circle" coords="120,40,20" href="#bottom" alt="Go to Bottom" />
+  </map>
+
+  
+  
+</section>
+  <section id="ProgressBars">
+    <h1>5. Progress Bars</h1>
+    <p>The &lt;progress&gt; element help us show the completion
+      progress of a task. The “ value ” attribute is the current progress,
+      while the “ max ” attribute is often set to 100 . </p>
+      <p>
+        Uploading: <progress value="60" max="100"></progress>60%
+      </p>
+      <p></p>
+      <P>Meter</P>
+      <p> Disk usage: <meter  value="60" max="120"></meter> 60GB out of 120GB</p>
+      <p></p>
+  </section>
+
+
+
+
+<div id="bottom" style="margin-top: 500px; text-align: center;">
+    <h2>Bottom of Page</h2>
+    <p>You reached the bottom!</p>
+  </div>
+</body>
+</html>

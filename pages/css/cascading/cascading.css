@@ -1,0 +1,35 @@
+#last-declaration {
+  color: yellow;
+}
+
+#last-declaration {
+  color: blue;
+}
+
+.test-heading {
+  color: green;
+}
+
+#specificity-test {
+  color: orange;
+}
+
+#inline-test {
+  color: green !important;
+}
+
+#important-test {
+  color: purple !important;
+}
+
+.parent {
+  color: red;
+}
+
+.child {
+  color: inherit;
+}
+
+.special {
+  color: blue;
+}

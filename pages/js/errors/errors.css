@@ -1,0 +1,51 @@
+.input-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e6f3ff;
+    border: 1px solid #0066cc;
+    border-radius: 5px;
+}
+
+.input-section input, .input-section button {
+    margin: 5px;
+    padding: 5px;
+}
+
+.section {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.section p {
+    margin: 8px 0;
+}
+
+.section span {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.section button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.section button:hover {
+    background-color: #004c99;
+}
+
+#current-error-value {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    border-radius: 5px;
+}

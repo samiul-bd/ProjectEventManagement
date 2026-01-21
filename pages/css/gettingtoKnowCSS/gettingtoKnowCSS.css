@@ -1,0 +1,105 @@
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #1d038f;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.logo h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.logo p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.Planly {
+  transition: transform 0.3s ease;
+}
+
+.Planly:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #1d038f;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #800080;
+  font-size: 28px;
+  margin: 25px 0 15px 0;
+  border-bottom: 3px solid #800080;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #006400;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+
+.syntax-example {
+  color: purple;
+  font-size: 24px;
+  background-color: #ffffcc;
+  padding: 10px;
+  border: 2px solid #cccc00;
+}
+
+.unit-example {
+  width: 50vw;
+  height: 20vh;
+  background-color: #ffcccc;
+  border: 2px solid #cc0000;
+  padding: 2rem;
+  margin: 1.5rem;
+}
+
+.border-example {
+  border: 3px solid blue;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ccffcc;
+  margin: 20px 0;
+}
+
+.external-example {
+  color: orange;
+  font-size: 22px;
+}

@@ -1,0 +1,35 @@
+.section {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.section label, .section input, .section button {
+    display: block;
+    margin: 5px 0;
+}
+
+.section p {
+    margin: 8px 0;
+}
+
+.section span {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.section button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.section button:hover {
+    background-color: #004c99;
+}

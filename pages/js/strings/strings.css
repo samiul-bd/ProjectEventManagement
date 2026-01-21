@@ -1,0 +1,46 @@
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+
+
+h2 {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.block {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #1d038f;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #15026b;
+}
+
+.output {
+  background-color: #f0f2ff;
+  padding: 12px;
+  border-radius: 5px;
+}

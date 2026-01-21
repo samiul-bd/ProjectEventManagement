@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Events</title>
+<link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>HTML Events</h1>
+  
+  <h2>9.1 Window Events</h2>
+  
+  <h3>9.1.1 onload</h3>
+  <div class="event-example">
+    <p>Page loaded message will appear</p>
+  </div>
+  
+  <h3>9.1.2 onresize</h3>
+  <div class="event-example">
+    <p>Resize browser window to trigger event</p>
+  </div>
+  
+  <h2>9.2 Form Events</h2>
+  
+  <h3>9.2.1 onfocus</h3>
+  <input type="text" onfocus="focusFunction(this)" placeholder="Focus here" />
+  
+  <h3>9.2.2 onblur</h3>
+  <input type="text" id="blurInput" onblur="blurFunction()" placeholder="Leave focus" />
+  
+  <h3>9.2.3 onchange</h3>
+  <select id="changeSelect" onchange="changeFunction()">
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="Blue">Blue</option>
+  </select>
+  
+  <h3>9.2.4 oninput</h3>
+  <input type="text" id="inputField" oninput="inputFunction()" placeholder="Type here" />
+  <p id="inputOutput">Output appears here</p>
+  
+  <h2>9.3 Keyboard Events</h2>
+  
+  <h3>9.3.1 onkeydown</h3>
+  <input type="text" onkeydown="keydownFunction()" placeholder="Press key" />
+  
+  <h3>9.3.2 onkeyup</h3>
+  <input type="text" id="keyupInput" onkeyup="keyupFunction()" placeholder="Release key" />
+  
+  <h3>9.3.3 onkeypress</h3>
+  <input type="text" onkeypress="keypressFunction()" placeholder="Press key" />
+  
+  <h2>9.4 Mouse Events</h2>
+  
+  <h3>9.4.1 onclick</h3>
+  <button onclick="clickFunction()">Click Me</button>
+  
+  <h3>9.4.2 ondblclick</h3>
+  <button ondblclick="dblclickFunction()">Double Click Me</button>
+  
+  <h3>9.4.3 onmousemove</h3>
+  <p onmousemove="mousemoveFunction(this)">Move mouse over me</p>
+  
+  <h3>9.4.4 onmousedown and onmouseup</h3>
+  <p id="mouseEvents" onmousedown="mousedownFunction()" onmouseup="mouseupFunction()">Press and release</p>
+  
+  <h3>9.4.5 onmouseover and onmouseout</h3>
+  <p onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)">Hover over/out</p>
+  
+  <h2>9.5 Clipboard Events</h2>
+  
+  <h3>9.5.1 oncopy</h3>
+  <input type="text" oncopy="copyFunction()" value="Copy this text" />
+  
+  <h3>9.5.2 oncut</h3>
+  <input type="text" oncut="cutFunction()" value="Cut this text" />
+  
+  <h3>9.5.3 onpaste</h3>
+  <input type="text" onpaste="pasteFunction()" placeholder="Paste here" />
+  
+  <script>
+    function loadFunction() {
+      alert("Page finished loading!");
+    }
+    
+    function resizeFunction() {
+      alert("Window resized!");
+    }
+    
+    function focusFunction(element) {
+      element.style.backgroundColor = "lightgreen";
+    }
+    
+    function blurFunction() {
+      var input = document.getElementById("blurInput");
+      alert("You entered: " + input.value);
+    }
+    
+    function changeFunction() {
+      var select = document.getElementById("changeSelect");
+      alert("Selected: " + select.value);
+    }
+    
+    function inputFunction() {
+      var input = document.getElementById("inputField");
+      var output = document.getElementById("inputOutput");
+      output.innerHTML = "Typed: " + input.value;
+    }
+    
+    function keydownFunction() {
+      alert("Key pressed down!");
+    }
+    
+    function keyupFunction() {
+      var input = document.getElementById("keyupInput");
+      input.value = input.value.toLowerCase();
+    }
+    
+    function keypressFunction() {
+      alert("Key pressed!");
+    }
+    
+    function clickFunction() {
+      alert("Button clicked!");
+    }
+    
+    function dblclickFunction() {
+      alert("Button double-clicked!");
+    }
+    
+    function mousemoveFunction(element) {
+      element.style.fontSize = "24px";
+    }
+    
+    function mousedownFunction() {
+      document.getElementById("mouseEvents").style.color = "red";
+    }
+    
+    function mouseupFunction() {
+      document.getElementById("mouseEvents").style.color = "blue";
+    }
+    
+    function mouseoverFunction(element) {
+      element.style.fontSize = "28px";
+    }
+    
+    function mouseoutFunction(element) {
+      element.style.fontSize = "16px";
+    }
+    
+    function copyFunction() {
+      alert("Text copied!");
+    }
+    
+    function cutFunction() {
+      alert("Text cut!");
+    }
+    
+    function pasteFunction() {
+      alert("Text pasted!");
+    }
+    
+    window.onload = loadFunction;
+    window.onresize = resizeFunction;
+  </script>
+</body>
+</html>

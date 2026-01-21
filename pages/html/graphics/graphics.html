@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Graphics</title>
+<link rel="stylesheet" href="graphics.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>HTML Graphics</h1>
+  
+  <h2>7.1 SVG Graphics</h2>
+  
+  <h3>7.1.1 SVG Rectangle</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <rect x="20" y="20" width="150" height="100" stroke="purple" stroke-width="4" fill="orange" />
+    </svg>
+  </div>
+  
+  <h3>7.1.2 SVG Circle</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <circle cx="100" cy="75" r="60" stroke="green" stroke-width="4" fill="cyan" />
+    </svg>
+  </div>
+  
+  <h3>7.1.3 SVG Ellipse</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <ellipse cx="100" cy="75" rx="80" ry="40" fill="magenta" stroke="blue" stroke-width="3" />
+    </svg>
+  </div>
+  
+  <h3>7.1.4 SVG Line</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <line x1="15" y1="15" x2="185" y2="75" stroke="brown" stroke-width="4" />
+    </svg>
+  </div>
+  
+  <h3>7.1.5 SVG Polyline</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <polyline points="100,20 180,75 100,130 20,75" fill="none" stroke="olive" stroke-width="4" />
+    </svg>
+  </div>
+  
+  <h3>7.1.6 SVG Polygon</h3>
+  <div class="svg-container">
+    <svg width="200" height="150">
+      <polygon points="100,20 180,75 100,130 20,75" fill="lime" stroke="teal" stroke-width="4" />
+    </svg>
+  </div>
+  
+  <h3>7.1.7 SVG Path</h3>
+  <div class="svg-container">
+    <svg height="150" width="200">
+      <path d="M100 20 L30 130 l140 0 Z" fill="none" stroke="navy" stroke-width="4" />
+    </svg>
+  </div>
+  
+  <h3>7.1.8 SVG Text</h3>
+  <div class="svg-container">
+    <svg height="150" width="300">
+      <text x="10" y="50" fill="darkred" font-size="24">SVG Graphics Text</text>
+    </svg>
+  </div>
+  
+  <h3>7.1.11 SVG Gradients</h3>
+  <h4>Linear Gradient</h4>
+  <div class="svg-container">
+    <svg height="150" width="300">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="pink" />
+          <stop offset="50%" stop-color="gray" />
+          <stop offset="100%" stop-color="black" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="300" height="150" fill="url(#grad1)" />
+    </svg>
+  </div>
+  
+  <h4>Radial Gradient</h4>
+  <div class="svg-container">
+    <svg height="150" width="300">
+      <defs>
+        <radialGradient id="grad-rad1" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+          <stop offset="0%" stop-color="lightblue" />
+          <stop offset="50%" stop-color="violet" />
+          <stop offset="100%" stop-color="indigo" />
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="300" height="150" fill="url(#grad-rad1)" />
+    </svg>
+  </div>
+  
+  <h2>7.2 Canvas</h2>
+  <h3>7.2.1 Draw Text</h3>
+  <div class="canvas-container">
+    <canvas id="my-canvas-text" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <h3>7.2.2 Draw Lines</h3>
+  <div class="canvas-container">
+    <canvas id="my-canvas-line" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <h3>7.2.3 Draw Circles</h3>
+  <div class="canvas-container">
+    <canvas id="my-canvas-circle" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <h3>7.2.4 Draw Rectangles</h3>
+  <div class="canvas-container">
+    <canvas id="my-canvas-rect" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <h3>7.2.5 Draw Gradients</h3>
+  <h4>Linear Gradient</h4>
+  <div class="canvas-container">
+    <canvas id="my-canvas-linear" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <h4>Radial Gradient</h4>
+  <div class="canvas-container">
+    <canvas id="my-canvas-radial" width="300" height="150" style="border: 3px solid #777"></canvas>
+  </div>
+  
+  <script>
+    // Draw Text
+    var c1 = document.getElementById("my-canvas-text");
+    var ctx1 = c1.getContext("2d");
+    ctx1.font = "28px Verdana";
+    ctx1.fillStyle = "purple";
+    ctx1.fillText("Canvas Drawing", 20, 80);
+    
+    // Draw Lines
+    var c2 = document.getElementById("my-canvas-line");
+    var ctx2 = c2.getContext("2d");
+    ctx2.strokeStyle = "orange";
+    ctx2.lineWidth = 5;
+    ctx2.moveTo(20, 20);
+    ctx2.lineTo(280, 75);
+    ctx2.stroke();
+    
+    // Draw Circles
+    var c3 = document.getElementById("my-canvas-circle");
+    var ctx3 = c3.getContext("2d");
+    ctx3.strokeStyle = "magenta";
+    ctx3.lineWidth = 5;
+    ctx3.beginPath();
+    ctx3.arc(150, 75, 60, 0, 2 * Math.PI);
+    ctx3.stroke();
+    
+    // Draw Rectangles
+    var c4 = document.getElementById("my-canvas-rect");
+    var ctx4 = c4.getContext("2d");
+    ctx4.strokeStyle = "teal";
+    ctx4.lineWidth = 5;
+    ctx4.strokeRect(40, 30, 220, 90);
+    
+    // Draw Linear Gradient
+    var c5 = document.getElementById("my-canvas-linear");
+    var ctx5 = c5.getContext("2d");
+    var grd = ctx5.createLinearGradient(0, 0, 300, 0);
+    grd.addColorStop(0, "yellow");
+    grd.addColorStop(1, "red");
+    ctx5.fillStyle = grd;
+    ctx5.fillRect(40, 30, 220, 90);
+    
+    // Draw Radial Gradient
+    var c6 = document.getElementById("my-canvas-radial");
+    var ctx6 = c6.getContext("2d");
+    var grd2 = ctx6.createRadialGradient(100, 75, 20, 150, 75, 90);
+    grd2.addColorStop(0, "white");
+    grd2.addColorStop(1, "purple");
+    ctx6.fillStyle = grd2;
+    ctx6.fillRect(0, 0, 300, 150);
+  </script>
+</body>
+</html>

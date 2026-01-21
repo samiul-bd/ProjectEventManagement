@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 12: Working with HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="html.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../../Resources/logo.png" alt="Logo" />
+            <div class="Planly">
+                <h1>Planly</h1>
+                <p>Focused on the planning stage.</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../../../Index.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Chapter 12: Working with HTML</h1>
+    
+    <h2>12.1 Accessing Elements and Finding Parents/Children</h2>
+    <div id="demodiv">
+        <p>This is text.</p>
+        <p>Another paragraph</p>
+    </div>
+    <button onclick="accessElementDemo()">Run Demo</button>
+    <p id="access-result"></p>
+    
+    <h2>12.2 Traversing Query Results</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="traverseQueryResults()">Traverse Nodes</button>
+    <p id="traverse-result"></p>
+    
+    <h2>12.3 Adding Click Functionality</h2>
+    <button id="click-button">Click Me</button>
+    <p id="click-result"></p>
+    
+    <h2>12.4 Finding Elements by Attribute</h2>
+    <div class="red">Red div</div>
+    <span class="blue">Blue span</span>
+    <p class="red">Red paragraph</p>
+    <button onclick="findElementsByAttribute()">Find by Attribute</button>
+    <p id="attribute-result"></p>
+    
+    <h2>12.5 Accessing Elements by Type</h2>
+    <img src="../../../Resources/logo.png" alt="Logo">
+    <img src="../../../Resources/logo.png" alt="Logo 2">
+    <p>Some text</p>
+    <button onclick="accessElementsByType()">Access Images</button>
+    <p id="type-result"></p>
+    
+    <h2>12.6 Using Selectors API</h2>
+    <div class="container">
+        <p>Paragraph in container</p>
+        <img src="../../../Resources/logo.png" alt="Nested image">
+    </div>
+    <button onclick="selectorsAPIDemo()">Selectors API</button>
+    <p id="selectors-result"></p>
+    
+    <h2>12.7 Changing Class Values</h2>
+    <div id="class-demo" class="initial-class">Demo Div</div>
+    <button onclick="changeClassValues()">Change Class</button>
+    
+    <h2>12.8 Setting Element Style</h2>
+    <div id="style-demo">Styled Div</div>
+    <button onclick="setElementStyle()">Set Style</button>
+    
+    <h2>12.9 Adding Text to Elements</h2>
+    <button onclick="addTextToElement()">Add Text</button>
+    <div id="text-target"></div>
+    
+    <h2>12.10 Inserting Elements</h2>
+    <div id="insert-target">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+    </div>
+    <button onclick="insertElement()">Insert Element</button>
+    
+    <h2>12.11 Checking Checkbox Status</h2>
+    <input type="checkbox" id="check"> Accept Terms
+    <button onclick="checkCheckboxStatus()">Check Status</button>
+    <p id="checkbox-result"></p>
+    
+    <h2>12.12 Adding Table Values</h2>
+    <table>
+        <tbody id="table-body">
+            <tr><td>Washington</td><td>145</td></tr>
+            <tr><td>Oregon</td><td>233</td></tr>
+            <tr><td>Missouri</td><td>833</td></tr>
+        </tbody>
+    </table>
+    <button onclick="addTableValues()">Sum Values</button>
+    <p id="sum-result"></p>
+    
+    <h2>12.13 Deleting Table Rows</h2>
+    <table id="delete-table">
+        <tbody>
+            <tr><td>Data 1</td><td>Data 2</td><td><button onclick="deleteTableRow(this)">Delete</button></td></tr>
+            <tr><td>Data 3</td><td>Data 4</td><td><button onclick="deleteTableRow(this)">Delete</button></td></tr>
+        </tbody>
+    </table>
+    
+    <h2>12.14 Hiding Elements</h2>
+    <div id="hide-demo" style="background-color: lightblue; padding: 10px;">Visible Element</div>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+    
+    <h2>12.15 Hover Pop-ups</h2>
+    <img id="hover-img" src="../../../Resources/logo.png" alt="Hover over me" style="width: 50px; height: 50px;">
+    <div id="popup" style="display: none; position: absolute; background: yellow; padding: 5px;"></div>
+    
+    <h2>12.16 Form Validation</h2>
+    <form id="validation-form">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="postal">Postal Code:</label>
+            <input type="text" id="postal" name="postal" pattern="[0-9]*">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="validation-result"></p>
+    
+    <h2>12.17 Accessibility</h2>
+    <form id="accessibility-form">
+        <div>
+            <label for="firstfield">First Field (Required):</label>
+            <input type="text" id="firstfield" name="firstfield" required aria-required="true">
+        </div>
+        <div>
+            <label for="thirdfield">Third Field (Numeric):</label>
+            <input type="text" id="thirdfield" name="thirdfield">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="accessibility-result"></p>
+    
+    <h2>12.18 Live Regions</h2>
+    <div id="live-region" aria-live="polite" style="background-color: lightgreen; padding: 10px;"></div>
+    <button onclick="updateLiveRegion()">Update Region</button>
+    
+    <script src="html.js"></script>
+</body>
+</html>

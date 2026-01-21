@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Forms</title>
+<link rel="stylesheet" href="webForms.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="../../../Resources/logo.png" alt="Logo" />
+      <div class="Planly">
+        <h1>Planly</h1>
+        <p>Focused on the planning stage.</p>
+      </div>
+    </div>
+    <nav>
+      <a  href="../../../Index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>Web Forms</h1>
+  
+  <form action="/login">
+    <label for="acc-name">Username:</label>
+    <input type="text" id="acc-name" name="username" /><br />
+    <label for="acc-pass">Password:</label>
+    <input type="password" id="acc-pass" name="password" /><br />
+    <input type="submit" value="Log in" />
+  </form>
+  
+  <h2>5.1 HTML Form Elements</h2>
+  
+  <h3>5.1.1 &lt;input&gt; and &lt;label&gt;</h3>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="firstname" />
+  
+  <h3>5.1.2 &lt;textarea&gt;</h3>
+  <textarea name="comment" rows="3" cols="30"> </textarea>
+  
+  <h3>5.1.3 &lt;select&gt; and &lt;option&gt;</h3>
+  <select name="car">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+  
+  <h3>5.1.4 &lt;button&gt;</h3>
+  <button>Submit</button>
+  
+  <h3>5.1.5 &lt;fieldset&gt; and &lt;legend&gt;</h3>
+  <fieldset>
+    <legend>Profile:</legend>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" />
+    <br /><br />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" />
+    <br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+  </fieldset>
+  
+  <h3>5.1.6 &lt;datalist&gt;</h3>
+  <datalist id="car-list">
+    <option value="Volvo"></option>
+    <option value="Saab"></option>
+    <option value="Mercedes"></option>
+    <option value="Audi"></option>
+  </datalist>
+  <input type="text" name="car" list="car-list" />
+  
+  <h2>5.2 HTML Input Types</h2>
+  
+  <h3>5.2.1 Buttons</h3>
+  <input type="button" value="Click me" onclick="alert('Hi')" />
+  <input type="image" src="../../../Resources/btnSubmit.png" alt="Submit" width="50" />
+  <input type="reset" />
+  
+  
+  <h3>5.2.2 Texts</h3>
+  <input type="text" name="firstname" />
+  <input type="password" name="password" />
+  <input type="email" name="email" />
+  <input type="url" name="yourSite" />
+  <input type="hidden" name="userId" value="123" />
+  
+  <h3>5.2.3 Numbers</h3>
+  <input type="number" name="quantity" min="1" max="9" />
+  <input type="range" name="points" min="0" max="10" />
+  
+  <h3>5.2.4 Options</h3>
+  <input type="checkbox" id="book" name="book" value="Book" />
+  <label for="book"> I have a book</label>
+  <br />
+  <input type="checkbox" id="pen" name="pen" value="Pen" />
+  <label for="pen"> I have a pen</label>
+  <br />
+  <input type="radio" id="book" name="schoolThing" value="Book" />
+  <label for="book"> A book</label>
+  <br />
+  <input type="radio" id="pen" name="schoolThing" value="Pen" />
+  <label for="pen"> A pen</label>
+  
+  <h3>5.2.5 Files</h3>
+  <input type="file" name="bgimage" />
+  
+  <h3>5.2.6 Date and Time</h3>
+  <input type="date" name="birthday" />
+  <input type="time" name="alarmTime" />
+  <input type="datetime-local" name="alarmDateTime" />
+  
+  <h3>5.2.7 Colors</h3>
+  <input type="color" name="bgcolor" />
+  
+  <h2>5.3 HTML Input Attributes</h2>
+  
+  <input type="text" name="firstname" value="Samiul" />
+  <input type="text" name="firstname" placeholder="Your first name here" />
+  <input type="text" name="firstname" value="Samiul" readonly />
+  <input type="text" name="firstname" value="Samiul" disabled />
+  <input type="submit" disabled />
+  <input type="text" name="firstname" size="6" />
+  <input type="number" name="points" step="2" />
+  <input type="text" name="fname" autofocus />
+  <input type="text" name="fname" autocomplete />
+  
+  <h2>5.4 Form Validation</h2>
+  
+  <input type="text" name="username" minlength="6" />
+  <input type="text" name="username" maxlength="6" />
+  <input type="number" name="quantity" min="1" max="8" />
+  <input type="text" name="fname" required />
+  <input type="text" name="code" pattern="[A-Za-z]{3}" title="Three letter code." />
+</body>
+</html>

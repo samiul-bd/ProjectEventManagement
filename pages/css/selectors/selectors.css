@@ -1,0 +1,186 @@
+
+    
+
+.h1 {
+  color: #1d038f;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #800080;
+  font-size: 28px;
+  margin: 25px 0 15px 0;
+  border-bottom: 3px solid #800080;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #006400;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+
+
+.universal-demo * p {
+  color: orange;
+}
+
+
+p {
+  color: blue;
+}
+
+
+#special {
+  color: red;
+  font-weight: bold;
+}
+
+
+.highlight {
+  background-color: yellow;
+}
+
+
+.highlight.urgent {
+  color: red;
+  font-weight: bold;
+}
+
+
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: purple;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+button:hover {
+  background-color: lightgreen;
+}
+
+input:required {
+  border: 2px solid blue;
+}
+
+input:disabled {
+  background-color: #ccc;
+}
+
+
+.child-demo p:first-child {
+  color: teal;
+}
+
+.child-demo p:last-child {
+  color: violet;
+}
+
+
+.combined-demo p {
+  color: brown;
+}
+
+.combined-demo > p {
+  color: darkred;
+}
+
+
+[data-category="news"] {
+  color: navy;
+}
+
+
+h3, p {
+  margin: 10px 0;
+}
+
+
+
+
+
+
+h2 {
+  color: #9933cc;
+  font-size: 26px;
+  margin: 25px 0 15px 0;
+  border-bottom: 3px solid #9933cc;
+  padding-bottom: 5px;
+}
+
+.demo-section * p {
+  color: coral;
+}
+
+p {
+  color: darkblue;
+}
+
+#unique-para {
+  color: crimson;
+  font-weight: bold;
+}
+
+.marked {
+  background-color: lightyellow;
+}
+
+.marked.important {
+  color: darkred;
+  font-weight: bold;
+}
+
+a:link {
+  color: forestgreen;
+}
+
+a:visited {
+  color: indigo;
+}
+
+input:focus {
+  background-color: lightcyan;
+}
+
+button:hover {
+  background-color: lightgreen;
+}
+
+input:required {
+  border: 2px solid navy;
+}
+
+input:disabled {
+  background-color: #ddd;
+}
+
+.child-section p:first-child {
+  color: teal;
+}
+
+.child-section p:last-child {
+  color: purple;
+}
+
+.combined-section p {
+  color: chocolate;
+}
+
+.combined-section > p {
+  color: darkred;
+}
+
+[category="tech"] {
+  color: darkslateblue;
+}
+
+h3, p {
+  margin: 12px 0;
+}
